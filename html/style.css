@@ -159,7 +159,7 @@ header .master_play .wave .wave1 {
   background: #36e2ec;
   margin-right: 3px;
   border-radius: 10px 10px 0px 0px;
-  animation: unset; 
+  animation: unset;
   /* wave 0.5s linear infinite turned off for some time*/
 }
 header .master_play .wave .wave1:nth-child(2) {
@@ -174,7 +174,7 @@ header .master_play .wave .wave1:nth-child(3) {
 
 /* JAVASCRIPT CLASSES */
 header .master_play .active1 .wave1 {
-  animation: wave .5s linear infinite;
+  animation: wave 0.5s linear infinite;
 }
 header .master_play .active1 .wave1:nth-child(2) {
   animation-delay: 0.4s;
@@ -192,4 +192,74 @@ header .master_play .active1 .wave1:nth-child(3) {
   0% {
     height: 10px;
   }
+}
+header .master_play img {
+  height: 35px;
+  width: 35px;
+}
+header .master_play h5 {
+  height: 130px;
+  /* border: 1px solid #fff; */
+  margin-left: 15px;
+  color: #fff;
+  line-height: 17px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+}
+header .master_play .subtitle {
+  font-size: 11px;
+  color: #4c5262;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+header .master_play .icon {
+  font-size: 20px;
+  color: #fff;
+  margin: 0px 20px 0px 40px;
+  outline: none;
+  display: flex;
+  align-items: center;
+}
+header .master_play .icon .bi {
+  cursor: pointer;
+  outline: none;
+}
+header .master_play .icon .shuffle {
+  font-size: 17px;
+  margin-right: 10px;
+  width: 18px;
+  overflow: flex;
+  display: flex;
+  align-items: center;
+}
+header .master_play .icon #download_music {
+  font-size: 20px;
+  margin-left: 10px;
+}
+header .master_play .icon .bi:nth-child(3) {
+  border: 1px solid rgb(105, 105, 105, 0.1);
+  border-radius: 50%;
+  padding: 1px 5px 0px 7px;
+  margin: 0px 5px;
+}
+header .master_play span {
+  counter-reset: #fff;
+  width: 32px;
+  /* border: 1px solid #fff; */
+  font-size: 11px;
+  font-weight: 400;
+}
+header .master_play #currentStart {
+  margin: 0px 0px 0px 20px;
+}
+header .master_play .bar {
+  position: relative;
+  width: 43%;
+  height: 2px;
+  background: rgb(105, 105, 170, 0.1);
+  margin: 0px 15px 0px 10px;
 }
