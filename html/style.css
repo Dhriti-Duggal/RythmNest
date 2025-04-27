@@ -282,7 +282,7 @@ header .master_play .bar .dot {
   transition: 1s linear;
 }
 header .master_play .bar .dot::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 15px;
   height: 15px;
