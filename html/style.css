@@ -388,11 +388,70 @@ header .song_side nav ul li {
   color: #4c5262;
   margin-right: 25px;
   cursor: pointer;
-  transition: .3s linear;
+  transition: 0.3s linear;
 }
-header .song_side nav ul li:hover{
+header .song_side nav ul li:hover {
   columns: #fff;
 }
-header .song_side nav ul li:nth-child(1){
+header .song_side nav ul li:nth-child(1) {
   color: #fff;
+}
+header .song_side nav ul li span {
+  position: absolute;
+  width: 100%;
+  height: 2.5px;
+  background: #36e2ec;
+  bottom: -5px;
+  left: 0;
+  border-radius: 20px;
+}
+header .song_side nav .search {
+  position: relative;
+  width: 40%;
+  padding: 1px 10px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  color: grey;
+}
+header .song_side nav .search::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(184, 184, 184, 184, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  z-index: -1;
+}
+header .song_side nav .search .bi {
+  font-size: 13px;
+  padding: 3px 0px 0px 10px;
+}
+header.song_side nav .search input {
+  background: none;
+  border: none;
+  outline: none;
+  pad: 0px 10px;
+  color: #fff;
+  font-size: 12px;
+}
+header.song_side nav .user {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  /* border: 1px solid #fff; */
+  border-radius: 50%;
+}
+header .song_side nav .user img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px;
+}
+header .song_side .content {
+  width: 90%;
+  height: 90%;
+  border: 1px solid #fff;
+  margin: auto;
+  padding-top: 20px;
 }
