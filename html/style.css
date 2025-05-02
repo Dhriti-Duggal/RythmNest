@@ -569,4 +569,11 @@ header .song_side .popular_song .pop_song li h5 .subtitle {
   color: #4c5262;
   text-overflow: ellipsis;
 }
+header .song_side .popular_artists{
+  width: 90%;
+  height: auto;
+  border: 1px solid #fff;
+  margin: auto ;
+  margin-top: 15px;
+}
 
