@@ -577,3 +577,16 @@ header .song_side .popular_artists{
   margin-top: 15px;
 }
 
+header .song_side .popular_artists .h4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .song_side .popular_artists .h4 .bi {
+  color: #a4a8b4;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+header .song_side .popular_artists .h4 .bi:hover {
+  color: #fff;
+}
