@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RythmNest - Your Musical Haven</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Header -->
+    <header>
+        <a href="#" class="logo">RythmNest</a>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="browse">Browse</a></li>
+                <li><a href="#" class="nav-link" data-page="genres">Genres</a></li>
+                <li><a href="#" class="nav-link" data-page="playlists">Playlists</a></li>
+                <li><a href="#" class="nav-link" data-page="artists">Artists</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <button class="btn btn-login" id="open-login">Login</button>
+            <button class="btn btn-signup" id="open-signup">Sign Up</button>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Home Page -->
+        <div class="page active" id="home-page">
+            <section class="hero">
+                <h1>Discover Your Sound</h1>
+                <p>Stream millions of songs, create personalized playlists, and connect with artists worldwide. Your musical journey starts here.</p>
+                <button class="btn-hero">Start Listening Free</button>
+            </section>
+            
+            <section>
+                <h2 class="section-title"><i class="fas fa-fire"></i> Trending Now</h2>
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="bollywood">Bollywood</button>
+                    <button class="filter-btn" data-filter="punjabi">Punjabi</button>
+                </div>
+                <div class="music-grid" id="trending-songs"></div>
+            </section>
+            
+            <section>
+                <h2 class="section-title"><i class="fas fa-heart"></i> Made For You</h2>
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="bollywood">Bollywood</button>
+                    <button class="filter-btn" data-filter="punjabi">Punjabi</button>
+                </div>
+                <div class="music-grid" id="recommended-songs"></div>
+            </section>
+            
+            <section>
+                <h2 class="section-title"><i class="fas fa-compact-disc"></i> New Releases</h2>
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="bollywood">Bollywood</button>
+                    <button class="filter-btn" data-filter="punjabi">Punjabi</button>
+                </div>
+                <div class="music-grid" id="new-releases"></div>
+            </section>
+        </div>
+        
+        <!-- Browse Page -->
+        <div class="page" id="browse-page">
+            <section class="hero" style="background-image: linear-gradient(135deg, rgba(23, 42, 69, 0.8) 0%, rgba(10, 25, 47, 0.8) 100%), url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                <h1>Browse Music</h1>
+                <p>Discover new music across all genres and categories. Find exactly what you're looking for.</p>
+            </section>
+            
+            <section>
+                <h2 class="section-title"><i class="fas fa-music"></i> Popular Albums</h2>
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="bollywood">Bollywood</button>
+                    <button class="filter-btn" data-filter="punjabi">Punjabi</button>
+                </div>
+                <div class="music-grid" id="browse-albums"></div>
+            </section>
+            
+            <section>
+                <h2 class="section-title"><i class="fas fa-headphones"></i> Top Charts</h2>
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="bollywood">Bollywood</button>
+                    <button class="filter-btn" data-filter="punjabi">Punjabi</button>
+                </div>
+                <div class="music-grid" id="top-charts"></div>
+            </section>
+        </div>
+        
+        <!-- Genres Page -->
+        <div class="page" id="genres-page">
+            <section class="hero" style="background-image: linear-gradient(135deg, rgba(23, 42, 69, 0.8) 0%, rgba(10, 25, 47, 0.8) 100%), url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                <h1>Explore Genres</h1>
+                <p>Dive into different musical styles and discover new favorites.</p>
+            </section>
+            
+            <section>
+                <h2 class="section-title"><i class="fas fa-guitar"></i> Popular Genres</h2>
+                <div class="category-grid" id="popular-genres"></div>
+            </section>
+            
+            <section>
+                <h2 class="section-title"><i class="fas fa-globe-asia"></i> Indian Music</h2>
+                <div class="category-grid" id="indian-genres"></div>
+            </section>
+            
+            <section>
+                <h2 class="section-title"><i class="fas fa-music"></i> Top Songs by Genre</h2>
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="bollywood">Bollywood</button>
+                    <button class="filter-btn" data-filter="punjabi">Punjabi</button>
+                </div>
+                <div class="music-grid" id="genre-songs"></div>
+            </section>
+        </div>
+        
+        <!-- Playlists Page -->
+        <div class="page" id="playlists-page">
+            <section class="hero" style="background-image: linear-gradient(135deg, rgba(23, 42, 69, 0.8) 0%, rgba(10, 25, 47, 0.8) 100%), url('https://images.unsplash.com/photo-1487180144351-b8472da7d491?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                <h1>Featured Playlists</h1>
+                <p>Curated collections for every mood and occasion.</p>
+            </section>
+            
+            <section>
+                <h2 class="section-title"><i class="fas fa-list"></i> Popular Playlists</h2>
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="bollywood">Bollywood</button>
+                    <button class="filter-btn" data-filter="punjabi">Punjabi</button>
+                </div>
+                <div class="music-grid" id="popular-playlists"></div>
+            </section>
+            
+            <section>
+                <h2 class="section-title"><i class="fas fa-bolt"></i> Mood Boosters</h2>
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="bollywood">Bollywood</button>
+                    <button class="filter-btn" data-filter="punjabi">Punjabi</button>
+                </div>
+                <div class="music-grid" id="mood-playlists"></div>
+            </section>
+        </div>
+        
+        <!-- Artists Page -->
+        <div class="page" id="artists-page">
+            <section class="hero" style="background-image: linear-gradient(135deg, rgba(23, 42, 69, 0.8) 0%, rgba(10, 25, 47, 0.8) 100%), url('https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                <h1>Featured Artists</h1>
+                <p>Discover and follow your favorite artists.</p>
+            </section>
+            
+            <section>
+                <h2 class="section-title"><i class="fas fa-star"></i> Popular Artists</h2>
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="bollywood">Bollywood</button>
+                    <button class="filter-btn" data-filter="punjabi">Punjabi</button>
+                </div>
+                <div class="artist-grid" id="popular-artists"></div>
+            </section>
+            
+            <section>
+                <h2 class="section-title"><i class="fas fa-flag"></i> Indian Artists</h2>
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="bollywood">Bollywood</button>
+                    <button class="filter-btn" data-filter="punjabi">Punjabi</button>
+                </div>
+                <div class="artist-grid" id="indian-artists"></div>
+            </section>
+            
+            <section>
+                <h2 class="section-title"><i class="fas fa-music"></i> Top Songs by Artist</h2>
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="bollywood">Bollywood</button>
+                    <button class="filter-btn" data-filter="punjabi">Punjabi</button>
+                </div>
+                <div class="music-grid" id="artist-songs"></div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Music Player -->
+    <div class="player">
+        <div class="song-info">
+            <div class="song-cover">
+                <img src="" alt="Now Playing" id="now-playing-cover">
+            </div>
+            <div class="song-details">
+                <h4 id="now-playing-title">No song selected</h4>
+                <p id="now-playing-artist">Click on a song to play</p>
+            </div>
+        </div>
+        <div class="player-controls">
+            <div class="controls">
+                <button id="shuffle"><i class="fas fa-random"></i></button>
+                <button id="prev"><i class="fas fa-step-backward"></i></button>
+                <button class="play-pause" id="play-pause"><i class="fas fa-play"></i></button>
+                <button id="next"><i class="fas fa-step-forward"></i></button>
+                <button id="repeat"><i class="fas fa-redo"></i></button>
+            </div>
+            <div class="progress-container">
+                <span class="progress-time" id="current-time">0:00</span>
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <span class="progress-time" id="duration">0:00</span>
+            </div>
+        </div>
+        <div class="volume-controls">
+            <button id="volume-btn"><i class="fas fa-volume-up"></i></button>
+            <div class="volume-bar" id="volume-bar">
+                <div class="volume-progress" id="volume-progress"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Auth Modal -->
+    <div class="auth-modal" id="auth-modal">
+        <div class="auth-container">
+            <button class="close-modal" id="close-modal">&times;</button>
+            <div class="welcome-section">
+                <h2 class="welcome-title">Welcome to RythmNest</h2>
+                <p class="welcome-text">Join our community of music enthusiasts and unlock a world of unlimited streaming, personalized recommendations, and exclusive content.</p>
+                <ul class="features">
+                    <li>Access to over 50 million songs</li>
+                    <li>Create and share playlists</li>
+                    <li>Personalized recommendations</li>
+                    <li>High quality audio streaming</li>
+                    <li>Exclusive artist content</li>
+                </ul>
+            </div>
+            
+            <div class="form-section">
+                <div class="form-toggle">
+                    <button class="toggle-btn active" id="login-tab">Login</button>
+                    <button class="toggle-btn" id="signup-tab">Sign Up</button>
+                </div>
+                
+                <form id="login-form" class="auth-form active">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="Enter your password" required>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                    
+                    <div class="social-login">
+                        <p>Or login with</p>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-apple"></i></a>
+                        </div>
+                    </div>
+                </form>
+                
+                <form id="signup-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="signup-username">Username</label>
+                        <input type="text" id="signup-username" placeholder="Choose a username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" placeholder="Create a password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm-password">Confirm Password</label>
+                        <input type="password" id="signup-confirm-password" placeholder="Confirm your password" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Create Account</button>
+                    
+                    <div class="social-login">
+                        <p>Or sign up with</p>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-apple"></i></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
