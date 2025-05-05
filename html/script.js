@@ -4,10 +4,54 @@ const music = new Audio('audio/Glass Animals - Heat Waves.mp3');
 const songs = [
     {
         id: 1,
-        songName:`On My Way<br> 
-        <div class="subtitle">Alan Walker</div>`,
+        songName:`Jhol<br> 
+        <div class="subtitle">Maanu and Annural Khalid</div>`,
         poster: "img/1.jpg" 
-    }
+    },
+    {
+        id: 2,
+        songName:`Jhol<br> 
+        <div class="subtitle">Maanu and Annural Khalid</div>`,
+        poster: "img/2.jpg" 
+    },
+    {
+        id: 3,
+        songName:`Jhol<br> 
+        <div class="subtitle">Maanu and Annural Khalid</div>`,
+        poster: "img/1.jpg" 
+    },
+    {
+        id: 4,
+        songName:`Jhol<br> 
+        <div class="subtitle">Maanu and Annural Khalid</div>`,
+        poster: "img/1.jpg" 
+    },
+    {
+        id: 5,
+        songName:`Jhol<br> 
+        <div class="subtitle">Maanu and Annural Khalid</div>`,
+        poster: "img/1.jpg" 
+    },
+    {
+        id: 6,
+        songName:`Jhol<br> 
+        <div class="subtitle">Maanu and Annural Khalid</div>`,
+        poster: "img/1.jpg" 
+    },
+    {
+        id: 7,
+        songName:`Jhol<br> 
+        <div class="subtitle">Maanu and Annural Khalid</div>`,
+        poster: "img/1.jpg" 
+    },
+    {
+        id: 8,
+        songName:`Jhol<br> 
+        <div class="subtitle">Maanu and Annural Khalid</div>`,
+        poster: "img/1.jpg" 
+    },
+    
+
 ]    
 
 let pop_song_left = document.getElementById('pop_song_left');
