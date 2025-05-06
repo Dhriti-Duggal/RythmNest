@@ -207,51 +207,51 @@ const songs = [
     // Top Charts
     {
         id: 21,
-        title: "Top 50 India",
+        title: "BTS",
         artist: "Various Artists",
-        cover: "https://charts-images.scdn.co/assets/locale_en/regional/daily/region_in_default.jpg",
+        cover: "file:///C:/Users/LOQ/Desktop/RythmNest/html/assets/bts.webp",
         duration: "Playlist",
-        audio: "",
+        audio: "file:///C:/Users/LOQ/Desktop/RythmNest/html/songs/9%20BTS%20(방탄소년단)%20작은%20것들을%20위한%20시%20(Boy%20With%20Luv)%20(feat.%20Halsey)%20Official%20MV.mp3",
         category: "chart",
         genre: "mixed"
     },
     {
         id: 22,
-        title: "Bollywood Top 50",
+        title: "BlackPink",
         artist: "Various Artists",
-        cover: "https://i.scdn.co/image/ab67706f00000002b5e1ff6532d6e4e48ea2a9d6",
+        cover: "https://rukminim3.flixcart.com/image/850/1000/xif0q/poster/q/p/y/small-poster005-black-pink-korean-band-posters-pandit-ji-poster-original-imaggkd7bzzhsq97.jpeg?q=90&crop=false",
         duration: "Playlist",
-        audio: "",
+        audio: "file:///C:/Users/LOQ/Desktop/RythmNest/html/songs/BLACKPINK%20-%20DDU-DU%20DDU-DU%20(뚜두뚜두)%20(Color%20Coded%20Eng%20Rom%20Han).mp3",
         category: "chart",
         genre: "bollywood"
     },
     {
         id: 23,
-        title: "Punjabi 101",
+        title: "Charlie Puth",
         artist: "Various Artists",
-        cover: "https://i.scdn.co/image/ab67706f00000002d3f07aa10d05fb4baab12b94",
+        cover: "file:///C:/Users/LOQ/Desktop/RythmNest/html/assets/charlie%20puth.webp",
         duration: "Playlist",
-        audio: "",
+        audio: "file:///C:/Users/LOQ/Desktop/RythmNest/html/songs/Attention%20-%20Charlie%20Puth.mp3",
         category: "chart",
         genre: "punjabi"
     },
     {
         id: 24,
-        title: "New Music Friday India",
+        title: "Beat it",
         artist: "Various Artists",
-        cover: "https://i.scdn.co/image/ab67706f00000002f7db432a27f5a5b59351f6e2",
+        cover: "file:///C:/Users/LOQ/Desktop/RythmNest/html/assets/1%20(3).jpeg",
         duration: "Playlist",
-        audio: "",
+        audio: "file:///C:/Users/LOQ/Desktop/RythmNest/html/songs/Demon%20Slayer%20Kimetsu%20no%20Yaiba%20-%20OP%20Full%20Gurenge%20.mp3",
         category: "chart",
         genre: "mixed"
     },
     {
         id: 25,
-        title: "Hot Hits India",
+        title: "Hot Hits",
         artist: "Various Artists",
-        cover: "https://i.scdn.co/image/ab67706f00000002c414e7d7f7a9ee7a2ab5b6a3",
+        cover: "file:///C:/Users/LOQ/Desktop/RythmNest/html/assets/1%20(13).jpg",
         duration: "Playlist",
-        audio: "",
+        audio: "file:///C:/Users/LOQ/Desktop/RythmNest/html/songs/Songs%20that%20make%20you%20feel%20like%20the%20Anti-Hero.mp3",
         category: "chart",
         genre: "mixed"
     },
@@ -504,6 +504,66 @@ const songArtist = document.getElementById('now-playing-artist');
 const navLinks = document.querySelectorAll('.nav-link');
 const pages = document.querySelectorAll('.page');
 const filterBtns = document.querySelectorAll('.filter-btn');
+
+// Auth Elements
+const logoutBtn = document.getElementById('logout-btn');
+const userProfile = document.getElementById('user-profile');
+const usernameDisplay = document.getElementById('username-display');
+const loginButtons = document.querySelector('.user-actions');
+
+// User Data Management
+function getUsers() {
+    return JSON.parse(localStorage.getItem('users')) || [];
+}
+
+function saveUsers(users) {
+    localStorage.setItem('users', JSON.stringify(users));
+}
+
+function getCurrentUser() {
+    return JSON.parse(localStorage.getItem('currentUser'));
+}
+
+function setCurrentUser(user) {
+    localStorage.setItem('currentUser', JSON.stringify(user));
+}
+
+function clearCurrentUser() {
+    localStorage.removeItem('currentUser');
+}
+
+// Form Validation
+function validateSignupForm(username, email, password, confirmPassword) {
+    if (!username || !email || !password || !confirmPassword) {
+        alert('Please fill in all fields');
+        return false;
+    }
+    
+    if (password !== confirmPassword) {
+        alert('Passwords do not match');
+        return false;
+    }
+    
+    if (password.length < 6) {
+        alert('Password must be at least 6 characters');
+        return false;
+    }
+    
+    const users = getUsers();
+    const emailExists = users.some(user => user.email === email);
+    if (emailExists) {
+        alert('Email already registered');
+        return false;
+    }
+    
+    const usernameExists = users.some(user => user.username === username);
+    if (usernameExists) {
+        alert('Username already taken');
+        return false;
+    }
+    
+    return true;
+}
 
 // Initialize player
 function loadSong(songIndex) {
@@ -973,45 +1033,97 @@ authModal.addEventListener('click', (e) => {
 });
 
 // Form submission handling
-loginForm.addEventListener('submit', function(e) {
+// Sign Up Functionality
+signupForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const email = document.getElementById('login-email').value;
-    const password = document.getElementById('login-password').value;
     
-    // Here you would typically send this data to your backend
-    console.log('Login attempt with:', { email, password });
-    
-    // For demo purposes, just show an alert and close modal
-    alert('Login successful! (This is a demo)');
-    authModal.classList.remove('active');
-});
-
-signupForm.addEventListener('submit', function(e) {
-    e.preventDefault();
     const username = document.getElementById('signup-username').value;
     const email = document.getElementById('signup-email').value;
     const password = document.getElementById('signup-password').value;
     const confirmPassword = document.getElementById('signup-confirm-password').value;
     
-    if (password !== confirmPassword) {
-        alert('Passwords do not match!');
+    if (!validateSignupForm(username, email, password, confirmPassword)) {
         return;
     }
     
-    // Here you would typically send this data to your backend
-    console.log('Signup attempt with:', { username, email, password });
+    const users = getUsers();
+    const newUser = {
+        id: Date.now().toString(),
+        username,
+        email,
+        password, // Note: In production, never store plain text passwords
+        createdAt: new Date().toISOString()
+    };
     
-    // For demo purposes, just show an alert and switch to login
-    alert('Account created successfully! (This is a demo)');
-    loginTab.classList.add('active');
-    loginForm.classList.add('active');
-    signupTab.classList.remove('active');
-    signupForm.classList.remove('active');
+    users.push(newUser);
+    saveUsers(users);
     
-    // Pre-fill the login form
-    document.getElementById('login-email').value = email;
-    document.getElementById('login-password').value = password;
+    alert('Account created successfully! Please login.');
+    switchToLogin();
+    
+    // Clear form
+    signupForm.reset();
 });
 
+// Login Functionality
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
+    
+    if (!email || !password) {
+        alert('Please fill in all fields');
+        return;
+    }
+    
+    const users = getUsers();
+    const user = users.find(user => user.email === email && user.password === password);
+    
+    if (!user) {
+        alert('Invalid email or password');
+        return;
+    }
+    
+    // Login successful
+    setCurrentUser(user);
+    updateUIAfterLogin(user);
+    toggleAuthModal();
+    loginForm.reset();
+    
+    alert(`Welcome back, ${user.username}!`);
+});
+
+// Logout Functionality
+logoutBtn.addEventListener('click', () => {
+    clearCurrentUser();
+    updateUIAfterLogout();
+    alert('You have been logged out');
+});
+
+// Update UI based on auth state
+function updateUIAfterLogin(user) {
+    loginButtons.style.display = 'none';
+    userProfile.style.display = 'flex';
+    usernameDisplay.textContent = user.username;
+}
+
+function updateUIAfterLogout() {
+    loginButtons.style.display = 'flex';
+    userProfile.style.display = 'none';
+}
+
+// Check auth state on page load
+function checkAuthState() {
+    const user = getCurrentUser();
+    if (user) {
+        updateUIAfterLogin(user);
+    } else {
+        updateUIAfterLogout();
+    }
+}
+
+// Initialize auth state
+checkAuthState();
 // Initialize the app
 loadHomePage();
