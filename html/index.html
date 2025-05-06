@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RythmNest - Your Musical Haven</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Main Header -->
@@ -24,6 +24,14 @@
             <button class="btn btn-login" id="open-login">Login</button>
             <button class="btn btn-signup" id="open-signup">Sign Up</button>
         </div>
+        
+<div class="user-profile" id="user-profile" style="display: none;">
+    <div class="user-avatar">
+        <i class="fas fa-user"></i>
+    </div>
+    <span id="username-display"></span>
+    <button class="btn btn-logout" id="logout-btn">Logout</button>
+</div>
     </header>
     
     <!-- Main Content -->
@@ -41,7 +49,7 @@
                 <div class="filter-controls">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="bollywood">Bollywood</button>
-                    <button class="filter-btn" data-filter="punjabi">Punjabi</button>
+                    <button class="filter-btn" data-filter="punjabi">Pop</button>
                 </div>
                 <div class="music-grid" id="trending-songs"></div>
             </section>
@@ -117,7 +125,7 @@
                 <div class="filter-controls">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="bollywood">Bollywood</button>
-                    <button class="filter-btn" data-filter="punjabi">Punjabi</button>
+                    <button class="filter-btn" data-filter="punjabi">Pop</button>
                 </div>
                 <div class="music-grid" id="genre-songs"></div>
             </section>
