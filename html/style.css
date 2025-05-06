@@ -11,7 +11,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -25,7 +25,11 @@ body {
 
 /* Header Styles */
 header {
-  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary-blue) 0%,
+    var(--primary-dark) 100%
+  );
   padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -60,7 +64,8 @@ nav a {
   transition: color 0.3s ease;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
   color: var(--accent-blue);
 }
 
@@ -92,6 +97,22 @@ nav a:hover, nav a.active {
   background: var(--accent-blue);
   border: 1px solid var(--accent-blue);
   color: var(--primary-dark);
+}
+.btn-logout {
+  background: var(--accent-blue);
+  border: 1px solid var(--accent-blue);
+  color: var(--primary-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+  background: #52e0c4;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
 }
 
 .btn-signup:hover {
@@ -140,13 +161,22 @@ main {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .hero {
-  background: linear-gradient(135deg, rgba(23, 42, 69, 0.8) 0%, rgba(10, 25, 47, 0.8) 100%), 
-              url('https://images.unsplash.com/photo-1496293455970-f8581aae0e3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+  background: linear-gradient(
+      135deg,
+      rgba(23, 42, 69, 0.8) 0%,
+      rgba(10, 25, 47, 0.8) 100%
+    ),
+    url("https://images.unsplash.com/photo-1496293455970-f8581aae0e3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
+      no-repeat center center;
   background-size: cover;
   height: 400px;
   border-radius: 10px;
@@ -307,13 +337,17 @@ main {
 }
 
 .category-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(100, 255, 218, 0.2), rgba(10, 25, 47, 0.7));
+  background: linear-gradient(
+    135deg,
+    rgba(100, 255, 218, 0.2),
+    rgba(10, 25, 47, 0.7)
+  );
 }
 
 .category-card:hover {
@@ -590,8 +624,13 @@ main {
 
 .welcome-section {
   flex: 1;
-  background: linear-gradient(135deg, rgba(23, 42, 69, 0.9) 0%, rgba(10, 25, 47, 0.9) 100%), 
-              url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+  background: linear-gradient(
+      135deg,
+      rgba(23, 42, 69, 0.9) 0%,
+      rgba(10, 25, 47, 0.9) 100%
+    ),
+    url("https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
+      no-repeat center center;
   background-size: cover;
   padding: 2rem;
   display: flex;
@@ -659,7 +698,7 @@ main {
 }
 
 .toggle-btn.active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -752,7 +791,7 @@ main {
 
 .social-login p::before,
 .social-login p::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   width: 30%;
@@ -796,137 +835,141 @@ main {
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .auth-container {
-      width: 700px;
+    width: 700px;
   }
-  
+
   .hero {
-      height: 350px;
-      padding: 0 2rem;
+    height: 350px;
+    padding: 0 2rem;
   }
-  
+
   .hero h1 {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 }
 
 @media (max-width: 768px) {
   header {
-      padding: 1rem;
+    padding: 1rem;
   }
-  
+
   nav ul {
-      gap: 1rem;
+    gap: 1rem;
   }
-  
+
   .auth-container {
-      flex-direction: column;
-      width: 90%;
-      min-height: auto;
+    flex-direction: column;
+    width: 90%;
+    min-height: auto;
   }
-  
+
   .welcome-section {
-      display: none;
+    display: none;
   }
-  
+
   .hero {
-      height: 300px;
-      padding: 0 1.5rem;
+    height: 300px;
+    padding: 0 1.5rem;
   }
-  
+
   .hero h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
-  
+
   .hero p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
-  
-  .music-grid, .category-grid {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+  .music-grid,
+  .category-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
-  
+
   .artist-grid {
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
-  
+
   .player {
-      padding: 0 1rem;
+    padding: 0 1rem;
   }
-  
+
   .song-info {
-      width: 30%;
+    width: 30%;
   }
-  
+
   .volume-controls {
-      width: 30%;
+    width: 30%;
   }
 }
 
 @media (max-width: 480px) {
   .logo {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
-  
+
   nav {
-      display: none;
+    display: none;
   }
-  
+
   .hero {
-      height: 250px;
-      padding: 0 1rem;
-      margin-bottom: 2rem;
+    height: 250px;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
   }
-  
+
   .hero h1 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
-  
-  .music-grid, .category-grid {
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-      gap: 1rem;
+
+  .music-grid,
+  .category-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
   }
-  
+
   .artist-grid {
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
-  
+
   .card-image {
-      height: 120px;
+    height: 120px;
   }
-  
+
   .category-card {
-      height: 100px;
+    height: 100px;
   }
-  
+
   .category-title {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
-  
+
   .artist-card {
-      width: 100px;
-      height: 100px;
+    width: 100px;
+    height: 100px;
   }
-  
+
   .player {
-      flex-direction: column;
-      height: auto;
-      padding: 1rem;
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
   }
-  
-  .song-info, .player-controls, .volume-controls {
-      width: 100%;
-  }
-  
-  .song-info {
-      margin-bottom: 1rem;
-  }
-  
+
+  .song-info,
+  .player-controls,
   .volume-controls {
-      margin-top: 1rem;
-      justify-content: center;
+    width: 100%;
   }
-  
+
+  .song-info {
+    margin-bottom: 1rem;
+  }
+
+  .volume-controls {
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
   body {
-      padding-bottom: 180px;
+    padding-bottom: 180px;
   }
 }
