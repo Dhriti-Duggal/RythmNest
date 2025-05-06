@@ -51,6 +51,16 @@ const songs = [
         category: "trending",
         genre: "bollywood"
     },
+    {
+        id: 10,
+        title: "99",
+        artist: "Mob Psycho",
+        cover: "file:///C:/Users/LOQ/Desktop/RythmNest/html/assets/99.jpeg",
+        duration: "4:08",
+        audio: "file:///C:/Users/LOQ/Desktop/RythmNest/html/songs/99.mp3",
+        category: "recommended",
+        genre: "bollywood"
+    },
     // Recommended Songs
     {
         id: 6,
@@ -102,7 +112,21 @@ const songs = [
         category: "recommended",
         genre: "bollywood"
     },
+    {
+        id: 1,
+        title: "Ae Dil Hai Mushkil",
+        artist: "Arijit Singh",
+        cover: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcStrv_oPE6vni313HxiliDz1adIGEbzlBmZH7Aczogkb7bLKVGz5chCNwrPYoCHR4KXYr0UjqWiEQHbwYIU6FgaiQ",
+        duration: "4:28",
+        audio: "file:///C:/Users/LOQ/Desktop/RythmNest/html/songs/Ae%20Dil%20Hai%20Mushkil%20Title%20Track%20Full%20Video%20-%20Ranbir,%20Anushka,%20Aishwarya%20Arijit%20Pritam.mp3",
+        category: "trending",
+        genre: "bollywood"
+    },
+      
+    
+    
     // New Releases
+    
     {
         id: 11,
         title: "Boy With Luv",
@@ -123,6 +147,7 @@ const songs = [
         category: "new",
         genre: "bollywood"
     },
+    
     {
         id: 13,
         title: "Smack That",
@@ -153,6 +178,7 @@ const songs = [
         category: "new",
         genre: "punjabi"
     },
+    
     // Browse Albums
     {
         id: 16,
