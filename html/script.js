@@ -7,7 +7,7 @@ const songs = [
         artist: "Arijit Singh",
         cover: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcStrv_oPE6vni313HxiliDz1adIGEbzlBmZH7Aczogkb7bLKVGz5chCNwrPYoCHR4KXYr0UjqWiEQHbwYIU6FgaiQ",
         duration: "4:28",
-        audio: "file:///C:/Users/LOQ/Downloads/Ae%20Dil%20Hai%20Mushkil%20Title%20Track%20Full%20Video%20-%20Ranbir",
+        audio: "https://cdn.jsdelivr.net/gh/Dhriti-Duggal/RythmNest/html/songs/Ae%20Dil%20Hai%20Mushkil%20Title%20Track%20Full%20Video%20-%20Ranbir%2C%20Anushka%2C%20Aishwarya%20Arijit%20Pritam.mp3",
         category: "trending",
         genre: "bollywood"
     },
@@ -78,7 +78,7 @@ const songs = [
         artist: "Jung Kook",
         cover: "file:///C:/Users/LOQ/Desktop/RythmNest/html/assets/euphoria.jpg",
         duration: "3:26",
-        audio: "file:///C:/Users/LOQ/Desktop/RythmNest/html/songs/5%20Euphoria.mp3",
+        audio: "https://cdn.jsdelivr.net/gh/Dhriti-Duggal/RythmNest/html/songs/5%20Euphoria.mp3",
         category: "recommended",
         genre: "English"
     },
