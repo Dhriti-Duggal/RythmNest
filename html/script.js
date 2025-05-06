@@ -7,7 +7,7 @@ const songs = [
         artist: "Arijit Singh",
         cover: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcStrv_oPE6vni313HxiliDz1adIGEbzlBmZH7Aczogkb7bLKVGz5chCNwrPYoCHR4KXYr0UjqWiEQHbwYIU6FgaiQ",
         duration: "4:28",
-        audio: "file:///C:/Users/LOQ/Desktop/RythmNest/html/songs/Ae%20Dil%20Hai%20Mushkil%20Title%20Track%20Full%20Video%20-%20Ranbir,%20Anushka,%20Aishwarya%20Arijit%20Pritam.mp3",
+        audio: "file:///C:/Users/LOQ/Downloads/Ae%20Dil%20Hai%20Mushkil%20Title%20Track%20Full%20Video%20-%20Ranbir",
         category: "trending",
         genre: "bollywood"
     },
