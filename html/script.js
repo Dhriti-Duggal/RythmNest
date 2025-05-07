@@ -7,7 +7,7 @@ const songs = [
         artist: "Arijit Singh",
         cover: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcStrv_oPE6vni313HxiliDz1adIGEbzlBmZH7Aczogkb7bLKVGz5chCNwrPYoCHR4KXYr0UjqWiEQHbwYIU6FgaiQ",
         duration: "4:28",
-        audio: "file:///C:/Users/LOQ/Desktop/RythmNest/html/songs/Ae%20Dil%20Hai%20Mushkil%20Title%20Track%20Full%20Video%20-%20Ranbir,%20Anushka,%20Aishwarya%20Arijit%20Pritam.mp3",
+        audio: "https://cdn.jsdelivr.net/gh/Dhriti-Duggal/RythmNest/html/songs/Ae%20Dil%20Hai%20Mushkil%20Title%20Track%20Full%20Video%20-%20Ranbir%2C%20Anushka%2C%20Aishwarya%20Arijit%20Pritam.mp3",
         category: "trending",
         genre: "bollywood"
     },
@@ -17,7 +17,7 @@ const songs = [
         artist: "Pentagon",
         cover: "file:///C:/Users/LOQ/Desktop/RythmNest/html/assets/shine.jpeg",
         duration: "4:14",
-        audio: "file:///C:/Users/LOQ/Desktop/RythmNest/html/songs/[MV]%20PENTAGON(펜타곤)%20_%20Shine(빛나리).mp3",
+        audio: "https://cdn.jsdelivr.net/gh/Dhriti-Duggal/RythmNest/html/songs/10%20%5BMV%5D%20PENTAGON(%ED%8E%9C%ED%83%80%EA%B3%A4)%20_%20Shine(%EB%B9%9B%EB%82%98%EB%A6%AC).mp3",
         category: "trending",
         genre: "English"
     },
@@ -27,7 +27,7 @@ const songs = [
         artist: "The Score",
         cover: "file:///C:/Users/LOQ/Desktop/RythmNest/html/assets/legends.jpg",
         duration: "3:50",
-        audio: "file:///C:/Users/LOQ/Desktop/RythmNest/html/songs/1%20The%20score%20-%20Legend.mp3",
+        audio: "https://cdn.jsdelivr.net/gh/Dhriti-Duggal/RythmNest/html/songs/1%20The%20score%20-%20Legend.mp3",
         category: "trending",
         genre: "bollywood"
     },
@@ -37,7 +37,7 @@ const songs = [
         artist: "Papa Roach",
         cover: "file:///C:/Users/LOQ/Desktop/RythmNest/html/assets/born%20for%20greatness.jpg",
         duration: "3:36",
-        audio: "file:///C:/Users/LOQ/Desktop/RythmNest/html/songs/2%20Papa%20Roach%20-%20Born%20For%20Greatness.mp3",
+        audio: "https://cdn.jsdelivr.net/gh/Dhriti-Duggal/RythmNest/html/songs/2%20Papa%20Roach%20-%20Born%20For%20Greatness.mp3",
         category: "trending",
         genre: "English"
     },
@@ -47,7 +47,7 @@ const songs = [
         artist: "Man With A Mission",
         cover: "file:///C:/Users/LOQ/Desktop/RythmNest/html/assets/seven%20deadly%20sins.jpg",
         duration: "3:36",
-        audio: "file:///C:/Users/LOQ/Desktop/RythmNest/html/songs/3%20MAN%20WITH%20A%20MISSION%20-%20Seven%20Deadly%20Sins.mp3",
+        audio: "https://cdn.jsdelivr.net/gh/Dhriti-Duggal/RythmNest/html/songs/3%20MAN%20WITH%20A%20MISSION%20-%20Seven%20Deadly%20Sins.mp3",
         category: "trending",
         genre: "bollywood"
     },
@@ -57,7 +57,7 @@ const songs = [
         artist: "Mob Psycho",
         cover: "file:///C:/Users/LOQ/Desktop/RythmNest/html/assets/99.jpeg",
         duration: "4:08",
-        audio: "file:///C:/Users/LOQ/Desktop/RythmNest/html/songs/99.mp3",
+        audio: "https://cdn.jsdelivr.net/gh/Dhriti-Duggal/RythmNest/html/songs/99.mp3",
         category: "recommended",
         genre: "bollywood"
     },
@@ -78,7 +78,7 @@ const songs = [
         artist: "Jung Kook",
         cover: "file:///C:/Users/LOQ/Desktop/RythmNest/html/assets/euphoria.jpg",
         duration: "3:26",
-        audio: "file:///C:/Users/LOQ/Desktop/RythmNest/html/songs/5%20Euphoria.mp3",
+        audio: "https://cdn.jsdelivr.net/gh/Dhriti-Duggal/RythmNest/html/songs/5%20Euphoria.mp3",
         category: "recommended",
         genre: "English"
     },
